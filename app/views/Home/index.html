@@ -1,0 +1,66 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+
+<nav class="ui menu">
+  <a class="ui active item" href="/home">Home</a>
+  <a class="ui item" href="/members">Members</a>
+  <a class="ui item" href="/profile">Profile</a>
+  <a class="ui item" href="/leaderboard">Leaderboard</a>
+  <a class="ui item" href="/logout">Logout</a>
+</nav>
+
+<section class="ui segment">
+  <h2 class="ui header">SpaceBook: Home page for ${user.firstName} ${user.lastName} </h2>
+  <h4> ${user.firstName} is ${user.age} years old and of ${user.nationality} nationality</h4>
+  <div>
+  <a href= "/accounts/edit/${user.id}"> Edit my details</a>
+  </div>
+  
+  <div class="ui two column grid segment">
+
+      <div class="ui column">
+      <div class="ui horizontal segment">
+     <h2>Friends (${user.friendships.size()}) </h2>
+        <div class="ui list">
+          #{list items:user.friendships, as:'friendship'}
+            <div class="item">
+              <img class="ui middle aligned mini image left floated" src="/profile/getpicture/${friendship.targetUser.id}">
+              <div class="content">
+               <a href="/publicprofile/${friendship.targetUser.id}"> ${friendship.targetUser.firstName} ${friendship.targetUser.lastName}</a>
+               <a href="/home/drop/${friendship.targetUser.id}"> drop </a>
+              </div>
+            </div>
+          
+          #{/list}
+        </div>
+        </div>
+        </div>
+   
+      <div class="ui column">
+      <div class="ui horizontal segment">
+        <h2>Messages </h2>
+        <div class="ui list">
+    #{list items:user.inbox, as:'message'}
+            <div class="item">
+            <img class="ui middle aligned mini image left floated" src="/profile/getpicture/${message.from.id}">
+             
+             <p> ${message.from.firstName} says...  ${message.messageText} </p>
+            </div>
+          #{/list}
+
+          
+      
+        </div>
+      
+      <div class="tiny ui button">
+  BY DATE
+</div>
+<a class="tiny ui button" href="home/byUser">
+  BY USER </a>
+<div class="tiny ui button">
+  BY CONVERSATION
+</div>
+    </div>
+    </div>
+</div>
+</section>

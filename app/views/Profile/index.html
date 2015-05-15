@@ -1,0 +1,39 @@
+#{extends 'main.html' /}
+#{set title:'Profile' /}
+
+<nav class="ui menu">
+  <a class="ui item" href="/home">Home</a>
+  <a class="ui item" href="/members">Members</a>
+  <a class="ui active item" href="/profile">Profile</a>
+   <a class="ui item" href="/leaderboard">Leaderboard</a>
+  <a class="ui item" href="/logout">Logout</a>
+</nav>
+
+<section class="ui segment">
+  <h2 class="ui header">${user.firstName} ${user.lastName}'s Profile</h2>
+  <h3>   ${user.email} </h3>
+  <div class="ui two column grid segment">
+    <div class="ui row">
+      <div class="ui column">
+        <p>
+          <img src="/profile/getpicture/${user.id}" />
+        </p>
+        <form action="profile/uploadpicture/${user.id}" method="post" enctype="multipart/form-data">
+          <input type="file" name="picture" value="" /> <input type="submit" name="submit" value="upload" />
+        </form>
+      </div>
+      <div class="ui column form segment">
+            <h2 class="ui small header"> Status</h2>
+        <div class="ui green block label">
+          <p> ${user.statusText} </p>
+        </div>
+        <hr>
+        <form action="profile/changestatus" method="post">
+          <h3 class="ui inverted teal block header">Enter Status</h3>
+          <textarea class="ui field" name="profiletext"> </textarea>
+          <input class="ui blue button" type="submit" name="submit" value="Change" />
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

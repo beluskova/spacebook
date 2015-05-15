@@ -1,0 +1,207 @@
+User(homer):
+    firstName: Homer
+    lastName: Simpson
+    email: homer@simpson.com
+    password: secret
+    friendships:
+                - friend1
+                - friend2
+                - friend3
+                - friend4
+                - friend5
+#father, main character
+
+User(marge):
+    firstName: Marge
+    lastName: Simpson
+    email: marge@simpson.com
+    password: secret
+    friendships:
+                - friend6
+                - friend7
+                - friend8
+                - friend9
+#mother, main character
+
+User(bart):
+    firstName: Bart
+    lastName: Simpson
+    email: bart@simpson.com
+    password: secret
+#son 
+   
+User(maggie):
+    firstName: Maggie
+    lastName: Simpson
+    email: maggie@simpson.com
+    password: secret
+#daughter
+
+User(lisa):
+    firstName: Lisa
+    lastName: Simpson
+    email: lisa@simpson.com
+    password: secret
+#daughter
+   
+User(abraham):
+    firstName: Abraham
+    lastName: Simpson
+    email: abraham@simpson.com
+    password: secret
+#grandpa, Homer's father
+    
+User(mona):
+    firstName: Mona
+    lastName: Simpson
+    email: mona@simpson.com
+    password: secret
+#grandma, Homer's mother
+
+User(jacqueline):
+    firstName: Jacqueline
+    lastName: Bouvier
+    email: jacqueline@simpson.com
+    password: secret
+#Marge's mother, grandma
+    
+User(patty):
+    firstName: Patty
+    lastName: Bouvier
+    email: patty@simpson.com
+    password: secret
+#Marge's sister
+
+User(selma):
+    firstName: Selma
+    lastName: Bouvier
+    email: selma@simpson.com
+    password: secret
+#Marge's sister
+
+User(ned):
+    firstName: Ned
+    lastName: Flanders
+    email: ned@simpson.com
+    password: secret
+#the Simpson's next door neighbour
+    
+User(rod):
+    firstName: Rod	
+    lastName: Flanders
+    email: rod@simpson.com
+    password: secret
+#neighbour's older son
+   
+User(todd):
+    firstName: Todd
+    lastName: Flanders
+    email: todd@simpson.com
+    password: secret
+#neighbour's younger son
+
+User(carl):
+    firstName: Carl
+    lastName: Carlson
+    email: carl@simpson.com
+    password: secret
+#Homer's colleague
+    
+User(barney):
+    firstName: Barney
+    lastName: Gumble
+    email: barney@simpson.com
+    password: secret
+#Homer's drunken old pal
+
+User(lenny):
+    firstName: Lenny
+    lastName: Leonard
+    email: lenny@simpson.com
+    password: secret
+#Homer's friend and colleague
+
+User(milhouse):
+    firstName: Milhouse
+    lastName: Van Houten
+    email: milhouse@simpson.com
+    password: secret
+#Bart's best friend
+    
+User(elizabeth):
+    firstName: Elizabeth	
+    lastName: Hoover
+    email: elizabeth@simpson.com
+    password: secret
+#Liza's primary school teacher
+
+Message(message1):
+    from: marge
+    to: homer
+    subject: hi
+    messageText: Where are you off to?
+    postedAt: Thu May 14 21:38:37 BST 2015
+
+Message(message2):
+    from: lisa
+    to: homer
+    subject: hi
+    messageText: Why are you not at work?
+    postedAt: Thu May 14 21:38:39 BST 2015
+    
+Message(message3):
+    from: marge
+    to: homer
+    subject: hi
+    messageText: Why are you going to the pub?
+    postedAt: Thu May 14 21:38:40 BST 2015
+    
+Message(message4):
+    from: marge
+    to: homer
+    subject: hi
+    messageText: Don't be late!
+    postedAt: Thu May 14 21:38:42 BST 2015
+    
+Message(message5):
+    from: lisa
+    to: homer
+    subject: hi
+    messageText: Explain yourself?
+    postedAt: Thu May 14 21:38:43 BST 2015
+
+Friendship(friend1):
+    sourceUser: homer
+    targetUser: marge
+    
+Friendship(friend2):
+    sourceUser: homer
+    targetUser: lisa
+
+Friendship(friend3):
+    sourceUser: homer
+    targetUser: barney
+
+Friendship(friend4):
+    sourceUser: homer
+    targetUser: bart
+    
+Friendship(friend5):
+    sourceUser: homer
+    targetUser: maggie
+    
+Friendship(friend6):
+    sourceUser: marge
+    targetUser: homer
+    
+Friendship(friend7):
+    sourceUser: marge
+    targetUser: lisa
+    
+Friendship(friend8):
+    sourceUser: marge
+    targetUser: bart
+
+Friendship(friend9):
+    sourceUser: marge
+    targetUser: maggie

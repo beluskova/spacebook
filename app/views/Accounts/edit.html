@@ -1,0 +1,41 @@
+#{extends 'main.html' /}
+#{set title:'Edit details' /}
+
+<nav class="ui menu">
+  <a class="ui active item" href="/home">Back to Home</a>
+</nav>
+
+
+<section class="ui form segment">
+  <form action="/accounts/save" method="POST">
+    <div class="two fields">
+      <div class="field">
+        <label>First Name</label>
+        <input placeholder = "${me.firstName}" type="text" name="firstName"> 
+      </div>
+      <div class="field">
+        <label>Last Name</label>
+        <input placeholder = "${me.lastName}" type="text" name="lastName">
+      </div>
+    </div> 
+    <div class="field">
+      <label>Email</label>
+      <input placeholder = "${me.email}" type="text" name="email">
+    </div>
+        <div class="two fields">
+      <div class="field">
+        <label>Age</label>
+        <input placeholder = "${me.age}" type="text" name="age">
+      </div>
+      <div class="field">
+        <label>Nationality</label>
+        <input placeholder="${me.nationality}" type="text" name="nationality">
+      </div>
+    </div> 
+</section> 
+    <button class="ui blue submit button">Change details</button>
+  </form>
+
+
+    
+ 
