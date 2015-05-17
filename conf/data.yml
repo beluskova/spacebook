@@ -3,6 +3,8 @@ User(homer):
     lastName: Simpson
     email: homer@simpson.com
     password: secret
+    age: 55
+    nationality: American
     friendships:
                 - friend1
                 - friend2
@@ -16,6 +18,8 @@ User(marge):
     lastName: Simpson
     email: marge@simpson.com
     password: secret
+    age: 50
+    nationality: American
     friendships:
                 - friend6
                 - friend7
@@ -28,6 +32,11 @@ User(bart):
     lastName: Simpson
     email: bart@simpson.com
     password: secret
+    age: 17
+    nationality: American
+    friendships:
+                - friend14
+                - friend15
 #son 
    
 User(maggie):
@@ -35,6 +44,8 @@ User(maggie):
     lastName: Simpson
     email: maggie@simpson.com
     password: secret
+    age: 10
+    nationality: American
 #daughter
 
 User(lisa):
@@ -42,6 +53,12 @@ User(lisa):
     lastName: Simpson
     email: lisa@simpson.com
     password: secret
+    age: 6
+    nationality: American
+    friendships:
+                - friend10
+                - friend11
+                - friend12
 #daughter
    
 User(abraham):
@@ -84,6 +101,8 @@ User(ned):
     lastName: Flanders
     email: ned@simpson.com
     password: secret
+    friendships:
+                - friend15
 #the Simpson's next door neighbour
     
 User(rod):
@@ -99,41 +118,17 @@ User(todd):
     email: todd@simpson.com
     password: secret
 #neighbour's younger son
-
-User(carl):
-    firstName: Carl
-    lastName: Carlson
-    email: carl@simpson.com
-    password: secret
-#Homer's colleague
-    
+  
 User(barney):
     firstName: Barney
     lastName: Gumble
     email: barney@simpson.com
     password: secret
+    age: 40
+    nationality: German
+    friendships:
+                - friend13
 #Homer's drunken old pal
-
-User(lenny):
-    firstName: Lenny
-    lastName: Leonard
-    email: lenny@simpson.com
-    password: secret
-#Homer's friend and colleague
-
-User(milhouse):
-    firstName: Milhouse
-    lastName: Van Houten
-    email: milhouse@simpson.com
-    password: secret
-#Bart's best friend
-    
-User(elizabeth):
-    firstName: Elizabeth	
-    lastName: Hoover
-    email: elizabeth@simpson.com
-    password: secret
-#Liza's primary school teacher
 
 Message(message3):
     from: marge
@@ -192,6 +187,34 @@ Message(message8):
     messageText: I am working !?
     postedAt: 2015-05-15 12:10:52.881
     
+Message(message9):
+    from: barney
+    to: homer
+    subject: hi
+    messageText: How is your day?
+    postedAt: 2015-05-16 12:10:21.881	
+    
+Message(message10):
+    from: homer
+    to: barney
+    subject: hi
+    messageText: It isn't that bad...
+    postedAt: 2015-05-16 12:10:30.881	
+    
+Message(message11):
+    from: marge
+    to: lisa
+    subject: hi
+    messageText: Are you going shopping with me today?
+    postedAt: 2015-05-16 12:10:24.881	
+    
+Message(message12):
+    from: marge
+    to: homer
+    subject: hi
+    messageText: No...I have to do my homework...
+    postedAt: 2015-05-16 12:10:40.881	
+    
 Friendship(friend1):
     sourceUser: homer
     targetUser: marge
@@ -227,3 +250,31 @@ Friendship(friend8):
 Friendship(friend9):
     sourceUser: marge
     targetUser: maggie
+    
+Friendship(friend10):
+    sourceUser: lisa
+    targetUser: marge
+    
+Friendship(friend11):
+    sourceUser: lisa
+    targetUser: homer
+
+Friendship(friend12):
+    sourceUser: lisa
+    targetUser: bart
+    
+Friendship(friend13):
+    sourceUser: barney
+    targetUser: homer
+    
+Friendship(friend14):
+    sourceUser: bart
+    targetUser: lisa
+    
+Friendship(friend14):
+    sourceUser: bart
+    targetUser: ned
+    
+Friendship(friend15):
+    sourceUser: ned
+    targetUser: bart

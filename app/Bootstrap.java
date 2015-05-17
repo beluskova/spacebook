@@ -55,6 +55,12 @@ public class Bootstrap extends Job
       bart.profilePicture = blob4;
       bart.save();
 
+      String photoName5 = "app/barney.jpg";
+      Blob blob5 =  new Blob ();
+      blob5.set(new FileInputStream(photoName5), MimeTypes.getContentType(photoName5));
+      User barney = User.findByEmail("barney@simpson.com");
+      barney.profilePicture = blob5;
+      barney.save();
 
    }
   }

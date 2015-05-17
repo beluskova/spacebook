@@ -21,12 +21,13 @@ GET     /profile/getpicture/{id}			    Profile.getPicture
 GET     /home/byUser                            Home.byUser
 GET     /home/byDate                            Home.byDate
 GET     /home/conversation                      Home.conversation
-#GET     /home/byConversation                    Home.byConversation
+# To enable re-clicking between the sorts:
 GET     /home/home/byDate                       Home.byDate
 GET     /home/home/byUser                       Home.byUser
 GET     /home/home/conversation                 Home.conversation
 GET     /home/home/home/byUser                  Home.byUser
-
+GET     /home/home/home/conversation            Home.conversation
+GET     /home/home/home/byDate                  Home.byDate
 
 # Edit page
 GET     /accounts/edit/{id}                     Accounts.edit
@@ -52,6 +53,11 @@ GET     /profile/getpicture/{id}                Profile.getPicture
 GET      /leaderboard                           Leaderboard.index
 GET      /leaderboard/mostSocial                Leaderboard.mostSocial
 GET      /leaderboard/talkative                 Leaderboard.talkative
+GET      /leaderboard/leaderboard/mostSocial    Leaderboard.mostSocial
+# To enable re-clicking between the sorts:
+GET      /leaderboard/leaderboard/leaderboard/mostSocial                Leaderboard.mostSocial
+GET      /leaderboard/leaderboard/talkative     Leaderboard.talkative
+GET      /leaderboard/leaderboard/leaderboard/talkative                 Leaderboard.talkative
 
 # Public Profiles
 GET     /publicprofile/{id}                     PublicProfile.visit

@@ -8,7 +8,7 @@
 	<h2 class="ui header">
 		<div class="item">
 			<img class="ui middle aligned avatar image left floated"
-				src="/profile/getpicture/${user.id}" /> ${user.firstName}
+				src="/profile/getpicture/${user.id}"> ${user.firstName}
 			${user.lastName}'s Profile (${user.nationality} nationality)
 	</h2>
 	<p>${user.firstName} is ${user.statusText}</p>
@@ -44,8 +44,12 @@
 				</h2>
 				<div class="ui list">
 					#{list items:user.inbox, as:'message'}
-					<div class="item">${message.from.firstName} says...
-						${message.messageText}</div>
+					<div class="item">
+						<img class="ui middle aligned mini image left floated"
+							src="/profile/getpicture/${message.from.id}">
+					<p>${message.from.firstName} says...
+						${message.messageText}</p>
+						</div>
 					#{/list}
 				</div>
 			</div>
