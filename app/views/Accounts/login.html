@@ -1,21 +1,18 @@
-#{extends 'main.html' /}
-#{set title:'Login to Spacebook' /}
+#{extends 'main.html' /} #{set title:'Login to Spacebook' /}
 
-<nav class="ui menu">
-  <a class="item" href="/signup"> Signup  </a>
-  <a class="active item" href="/login"> Login  </a>
-</nav> 
+<nav class="ui blue inverted menu">
+	<a class="item" href="/signup"> Signup </a> <a class="active item"
+		href="/login"> Login </a>
+</nav>
 
 <section class="ui form segment">
-  <form action="/authenticate" method="POST">
-    <div class="field">
-      <label> Username: </label>
-      <input type="text" name="email">
-    </div>  
-    <div class="field">
-      <label>  Password: </label>
-      <input type="password" name="password">
-    </div>
-    <button class="ui blue submit button">Login</button>
-  </form>
+	<form action="/authenticate" method="POST">
+		<div class="field">
+			<label> Username: </label> <input type="text" name="email">
+		</div>
+		<div class="field">
+			<label> Password: </label> <input type="password" name="password">
+		</div>
+		<button class="ui blue submit button">Login</button>
+	</form>
 </section>

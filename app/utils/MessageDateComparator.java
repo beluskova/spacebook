@@ -9,7 +9,6 @@ public class MessageDateComparator implements Comparator<Message>
 {
   public int compare(Message a, Message b)
   {
-         return a.postedAt.compareTo(b.postedAt);
+    return a.postedAt.compareTo(b.postedAt);
   }
 }
-   

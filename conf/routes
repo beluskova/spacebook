@@ -17,14 +17,28 @@ POST   /register                                Accounts.register
 # Home page 
 GET     /home                                   Home.index
 GET     /home/drop/{id}                         Home.drop
-GET     /accounts/edit/{id}                     Accounts.edit
-POST    /accounts/save                          Accounts.save
 GET     /profile/getpicture/{id}			    Profile.getPicture
 GET     /home/byUser                            Home.byUser
+GET     /home/byDate                            Home.byDate
+GET     /home/conversation                      Home.conversation
+#GET     /home/byConversation                    Home.byConversation
+GET     /home/home/byDate                       Home.byDate
+GET     /home/home/byUser                       Home.byUser
+GET     /home/home/conversation                 Home.conversation
+GET     /home/home/home/byUser                  Home.byUser
+
+
+# Edit page
+GET     /accounts/edit/{id}                     Accounts.edit
+POST    /accounts/save_firstName                Accounts.save_firstName
+POST    /accounts/save_lastName                 Accounts.save_lastName
+POST    /accounts/save_email                    Accounts.save_email
+POST    /accounts/save_age                      Accounts.save_age
+POST    /accounts/save_nationality              Accounts.save_nationality
 
 # Members page
 GET     /members                                Members.index
-GET     /members/follow/{id}                    Home.follow
+GET     /members/follow/{id}                    Members.follow
 
 # Profile page
 GET     /profile                                Profile.index
@@ -36,6 +50,8 @@ GET     /profile/getpicture/{id}                Profile.getPicture
 #Leaderboard page
 
 GET      /leaderboard                           Leaderboard.index
+GET      /leaderboard/mostSocial                Leaderboard.mostSocial
+GET      /leaderboard/talkative                 Leaderboard.talkative
 
 # Public Profiles
 GET     /publicprofile/{id}                     PublicProfile.visit

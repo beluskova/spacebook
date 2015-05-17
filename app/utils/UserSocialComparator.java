@@ -9,8 +9,10 @@ public class UserSocialComparator implements Comparator<User>
   @Override
   public int compare(User a, User b)
   {
-    //return Integer.compare (b.friendships.size(), a.friendships.size());
-    return Integer.valueOf(b.friendships.size()).compareTo(Integer.valueOf(a.friendships.size() ));
+    // if ( (a.friendships.size() > 0) && (b.friendships.size() > 0) )
+
+    // return Integer.compare (b.friendships.size(), a.friendships.size());
+    return Integer.valueOf(b.friendships.size()).compareTo(Integer.valueOf(a.friendships.size()));
+
   }
 }
-

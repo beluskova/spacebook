@@ -135,41 +135,63 @@ User(elizabeth):
     password: secret
 #Liza's primary school teacher
 
-Message(message1):
-    from: marge
-    to: homer
-    subject: hi
-    messageText: Where are you off to?
-    postedAt: Thu May 14 21:38:37 BST 2015
-
-Message(message2):
-    from: lisa
-    to: homer
-    subject: hi
-    messageText: Why are you not at work?
-    postedAt: Thu May 14 21:38:39 BST 2015
-    
 Message(message3):
     from: marge
     to: homer
     subject: hi
+    messageText: Where are you off to?
+    postedAt: 2015-05-15 12:10:21.881	
+
+Message(message1):
+    from: lisa
+    to: homer
+    subject: hi
+    messageText: Why are you not at work?
+    postedAt: 2015-05-15 12:10:40.881	
+    
+Message(message5):
+    from: marge
+    to: homer
+    subject: hi
     messageText: Why are you going to the pub?
-    postedAt: Thu May 14 21:38:40 BST 2015
+    postedAt: 2015-05-15 12:10:30.881	
     
 Message(message4):
     from: marge
     to: homer
     subject: hi
     messageText: Don't be late!
-    postedAt: Thu May 14 21:38:42 BST 2015
+    postedAt: 2015-05-15 12:10:34.881	
     
-Message(message5):
+Message(message2):
     from: lisa
     to: homer
     subject: hi
     messageText: Explain yourself?
-    postedAt: Thu May 14 21:38:43 BST 2015
+    postedAt: 2015-05-15 12:10:44.881	
 
+
+Message(message6):
+    from: homer	
+    to: marge
+    subject: hiya
+    messageText: I'm off to the pub!
+    postedAt: 2015-05-15 12:10:24.881
+    
+Message(message7):
+    from: homer	
+    to: marge
+    subject: hi
+    messageText: Doh!
+    postedAt: 2015-05-15 12:10:34.881
+    
+Message(message8):
+    from: homer
+    to: lisa
+    subject: hi lisa
+    messageText: I am working !?
+    postedAt: 2015-05-15 12:10:52.881
+    
 Friendship(friend1):
     sourceUser: homer
     targetUser: marge

@@ -1,13 +1,19 @@
-#{extends 'main.html' /}
-#{set title:'Welcome to Spacebook' /}
+#{extends 'main.html' /} #{set title:'Welcome to Spacebook' /}
+
+<section class="ui raised blue segment">
+	<h2 class="ui center aligned blue header">Welcome to the
+		Spacebook!</h2>
+	<h2 class="ui center aligned icon header">
+		<i class="massive inverted blue world icon"></i>
+	</h2>
 
 
-<nav class="ui menu">
-  <a class="item" href="/signup"> Signup  </a>
-  <a class="item" href="/login">  Login   </a>
-</nav> 
-
-<section class="ui segment">
-  <p> Signup or Log in to the Spacebook Service </p>
+	<h2 class="ui center aligned blue header">
+		<div class="ui centered buttons">
+			<a class="ui  big center aligned button" href="/signup"> Signup </a>
+			<div class="or"></div>
+			<a class="ui  big center aligned button" href="/login"> Login </a>
+		</div>
+	</h2>
 </section>
 

@@ -1,31 +1,27 @@
-#{extends 'main.html' /}
-#{set title:'Leaderboard' /}
+#{extends 'main.html' /} #{set title:'Leaderboard' /}
 
-<nav class="ui menu">
-  <a class="ui item" href="/home">Home</a>
-  <a class="ui item" href="/members">Members</a>
-  <a class="ui item" href="/profile">Profile</a>
-   <a class="ui active item" href="/leaderboard">Leaderboard</a>
-  <a class="ui item" href="/logout">Logout</a>
+<nav class="ui blue inverted menu">
+	<a class="ui item" href="/home">Home</a> <a class="ui item"
+		href="/members">Members</a> <a class="ui item" href="/profile">Profile</a>
+	<a class="ui active item" href="/leaderboard">Leaderboard</a> <a
+		class="ui item" href="/logout">Logout</a>
 </nav>
 
 <section class="ui segment">
-   <h2> Social Leaderboard </h2>
-    <div class="ui ordered list">
-      #{list items:users, as:'user'}
-      <div class="item">
-         <div class="content">
-          ${user.firstName} ${user.lastName} (inbox-${user.inbox.size()}, outbox-${user.outbox.size()}, friends-${user.friendships.size()})
-        </div>
-      </div> 
-    #{/list}
-        </div>
-<div class="tiny ui button">
-  MOST SOCIAL
-</div>
-<div class="tiny ui button">
-  MOST TALKATIVE
-</div>
-
+	<h2 class="ui header">
+		<i class="ui left floated big child icon"></i> Social Leaderboard
+	</h2>
+	<div class="ui ordered list">
+		#{list items:users, as:'user'}
+		<div class="item">
+			<div class="content">${user.firstName} ${user.lastName}
+				(inbox-${user.inbox.size()}, outbox-${user.outbox.size()},
+				friends-${user.friendships.size()})
+			</div>
+		</div>
+		#{/list}
+	</div>
+	<a class="tiny ui button" href="leaderboard/mostSocial"> MOST SOCIAL </a> 
+    <a class="tiny ui button" href="leaderboard/talkative"> MOST TALKATIVE</a>
 
 </section>

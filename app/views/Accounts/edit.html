@@ -1,41 +1,53 @@
-#{extends 'main.html' /}
-#{set title:'Edit details' /}
+#{extends 'main.html' /} #{set title:'Edit details' /}
 
-<nav class="ui menu">
-  <a class="ui active item" href="/home">Back to Home</a>
+<nav class="ui blue inverted menu">
+	<a class="ui active item" href="/home">Back to Home</a>
 </nav>
 
 
 <section class="ui form segment">
-  <form action="/accounts/save" method="POST">
-    <div class="two fields">
-      <div class="field">
-        <label>First Name</label>
-        <input placeholder = "${me.firstName}" type="text" name="firstName"> 
-      </div>
-      <div class="field">
-        <label>Last Name</label>
-        <input placeholder = "${me.lastName}" type="text" name="lastName">
-      </div>
-    </div> 
-    <div class="field">
-      <label>Email</label>
-      <input placeholder = "${me.email}" type="text" name="email">
-    </div>
-        <div class="two fields">
-      <div class="field">
-        <label>Age</label>
-        <input placeholder = "${me.age}" type="text" name="age">
-      </div>
-      <div class="field">
-        <label>Nationality</label>
-        <input placeholder="${me.nationality}" type="text" name="nationality">
-      </div>
-    </div> 
-</section> 
-    <button class="ui blue submit button">Change details</button>
-  </form>
+
+	<div class="two fields">
+		<div class="field">
+			<form action="/accounts/save_firstName" method="post">
+				<label>First Name</label> <input placeholder="${me.firstName}"
+					type="text" name="firstName">
+				<button class="ui blue submit button">Change</button>
+			</form>
+		</div>
+		<div class="field">
+			<form action="/accounts/save_lastName" method="post">
+				<label>Last Name</label> <input placeholder="${me.lastName}"
+					type="text" name="lastName">
+				<button class="ui blue submit button">Change</button>
+			</form>
+		</div>
+	</div>
+	<div class="field">
+		<form action="/accounts/save_email" method="post">
+			<label>Email</label> <input placeholder="${me.email}" type="text"
+				name="email">
+			<button class="ui blue submit button">Change</button>
+		</form>
+	</div>
+	<div class="two fields">
+		<div class="field">
+			<form action="/accounts/save_age" method="post">
+				<label>Age</label> <input placeholder="${me.age}" type="text"
+					name="age">
+				<button class="ui blue submit button">Change</button>
+			</form>
+		</div>
+		<div class="field">
+			<form action="/accounts/save_nationality" method="post">
+				<label>Nationality</label> <input placeholder="${me.nationality}"
+					type="text" name="nationality">
+				<button class="ui blue submit button">Change</button>
+			</form>
+		</div>
+	</div>
+</section>
 
 
-    
- 
+
+
