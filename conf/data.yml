@@ -156,7 +156,7 @@ Message(message4):
     to: homer
     subject: hi
     messageText: Don't be late!
-    postedAt: 2015-05-15 12:10:34.881	
+    postedAt: 2015-05-15 12:10:38.881	
     
 Message(message2):
     from: lisa
@@ -209,8 +209,8 @@ Message(message11):
     postedAt: 2015-05-16 12:10:24.881	
     
 Message(message12):
-    from: marge
-    to: homer
+    from: lisa
+    to: marge
     subject: hi
     messageText: No...I have to do my homework...
     postedAt: 2015-05-16 12:10:40.881	

@@ -9,7 +9,7 @@ import play.test.*;
 import play.db.jpa.Blob;
 import models.*;
 
-//@OnApplicationStart
+@OnApplicationStart
 public class Bootstrap extends Job 
 { 
   public void doJob() throws FileNotFoundException

@@ -33,37 +33,38 @@
 						<div class="content">
 							<a href="/publicprofile/${friendship.targetUser.id}">
 								${friendship.targetUser.firstName}
-								${friendship.targetUser.lastName}</a> 
-								<a href="/home/drop/${friendship.targetUser.id}"> Drop </a>
+								${friendship.targetUser.lastName}</a> <a
+								href="/home/drop/${friendship.targetUser.id}"> Drop </a>
 						</div>
 					</div>
-    				#{/list}
+					#{/list}
 				</div>
 			</div>
 		</div>
 		<div class="ui column">
 			<div class="ui horizontal segment">
 				<h2 class="ui header">
-					<i class="ui comment icon"></i> Messages</h2>
+					<i class="ui comment icon"></i> Messages
+				</h2>
+				<section class="ui segment">
+					#{list items: conversation, as:'Conversation'}
 					<section class="ui segment">
-						#{list items: conversation, as:'Conversation'}
-						<section class="ui segment">
 						#{list items: Conversation, as:'message'}
 						<div class="ui list">
-						<div class="ui item">
-						<img class="ui middle aligned mini image left floated"
-						 src="/profile/getpicture/${message.from.id}">
-						 <p>${message.postedAt}: : ${message.from.firstName} says... ${message.messageText}</p>
-						 </div>
-						 </div>
-						#{/list}
-						</section>
+							<div class="ui item">
+								<img class="ui middle aligned mini image left floated"
+									src="/profile/getpicture/${message.from.id}">
+								<p>${message.from.firstName} says... ${message.messageText}</p>
+							</div>
+						</div>
 						#{/list}
 					</section>
+					#{/list}
+				</section>
 
-					<a class="tiny ui button" href="home/byDate">BY DATE</a>
-                    <a class="tiny ui button" href="home/byUser">BY USER </a>
-                    <a class="tiny ui button" href="home/conversation">BY CONVERSATION</a>
+				<a class="tiny ui button" href="home/byDate">BY DATE</a> <a
+					class="tiny ui button" href="home/byUser">BY USER </a> <a
+					class="tiny ui button" href="home/conversation">BY CONVERSATION</a>
 			</div>
 		</div>
 	</div>

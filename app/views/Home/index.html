@@ -33,8 +33,8 @@
 						<div class="content">
 							<a href="/publicprofile/${friendship.targetUser.id}">
 								${friendship.targetUser.firstName}
-								${friendship.targetUser.lastName}</a>
-							    <a class="mini ui button" href="/home/drop/${friendship.targetUser.id}"> Drop </a>
+								${friendship.targetUser.lastName}</a> <a class="mini ui button"
+								href="/home/drop/${friendship.targetUser.id}"> Drop </a>
 						</div>
 					</div>
 
@@ -49,19 +49,29 @@
 					<i class="ui comment icon"></i> Messages
 				</h2>
 				<div class="ui list">
-					#{list items:user.inbox, as:'message'}
-					<div class="item">
-						<img class="ui middle aligned mini image left floated"
-							src="/profile/getpicture/${message.from.id}">
-						<p>${message.postedAt}: : ${message.from.firstName} says...
-							${message.messageText}</p>
+					<div class="ui two column grid segment">
+						#{list items:user.inbox, as:'message'}
+						<div class="ui column">
+							<div class="ui right floated left aligned horizontal segment">
+								<img class="ui left aligned avatar image"
+									src="/profile/getpicture/${message.from.id}"> <a
+									href="/publicprofile/${message.from.id}">
+									<p>${message.from.firstName}
+								</a>
+							</div>
+						</div>
+						<div class="ui column">
+							<div class="ui left floated horizontal segment">
+								<p>says... ${message.messageText} </p>
+							</div>
+						</div>
+						#{/list}
 					</div>
-					#{/list}
 				</div>
-				
-				<a class="tiny ui button" href="home/byDate">BY DATE</a>
-			    <a class="tiny ui button" href="home/byUser">BY USER </a>
-                <a class="tiny ui button" href="/home/conversation">BY CONVERSATION</a>
+				<a class="tiny ui button" href="home/byDate">BY DATE</a> <a
+					class="tiny ui button" href="home/byUser">BY USER </a> <a
+					class="tiny ui button" href="/home/conversation">BY
+					CONVERSATION </a>
 			</div>
 		</div>
 	</div>
